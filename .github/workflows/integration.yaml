@@ -10,11 +10,15 @@ on:
 
 jobs:
   run-tests-and-coverage:
-    uses: fermi-ad/.github/.github/workflows/rust-integration.yaml@b99946ba8722aeb25ac95245fa01862054748f92
+    uses: fermi-ad/.github/.github/workflows/rust-integration.yaml@9d9465e0b6a0c473d68ecf1b04dec74403f48dd3
     secrets: inherit
     permissions:
       contents: write
       pull-requests: write
+
+# If there are extra files to ignore during code coverage reporting, add
+#    with:
+#      coverage-exclude: '<The filename patterns to exclude, must begin with a pipe "|" character!>'
 
 # If using a git submodule, add 
 #    with:
